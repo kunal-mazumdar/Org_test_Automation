@@ -7,4 +7,4 @@ pipelines:
           nodePool: u18k8sdynamic_6080         
         execution:
           onExecute:
-            - docker run --rm --privileged alpine mkdir -p test && mount /dev/sdb test
+            - docker run --rm --privileged -v /dev/sdb:/dev/sdb alpine mkdir -p test && mount /dev/sdb test
