@@ -2,7 +2,7 @@ pipelines:
   - name: pipelines_N_DyNodeAWS_8996_002
     steps:
       - name: N_DyNodeAWS_8996_002
-        type: Bash
+        type: PowerShell
         configuration:
           nodePool: AWS_dynamic_node_win19
           runtime:
