@@ -24,7 +24,6 @@ pipelines:
           inputResources:
             - name: push_image_artifactory_gitRepo
           integrations:
-            - name: i_artifactoryRegistry
             - name: s_artifactory
         execution:
           onExecute:
@@ -45,9 +44,9 @@ pipelines:
         type: image
         image:
           custom:
-            registry: i_artifactoryRegistry
+            registry: s_artifactory
             sourceRepository: test-automation-docker-local
-            name: $artifactoryRegistry_url/test-automation-docker-local/jfreq
+            name: ${artifactoryRegistry_url}/test-automation-docker-local/jfreq
             tag: $image_tag
             autoPull: true
     steps:
@@ -58,7 +57,4 @@ pipelines:
             - printenv
             - echo $image_tag
             - echo $artifactoryRegistry_url
-            - |
-              [ $step_image_name == $artifactoryRegistry_url/test-automation-docker-local/jfreq ]
-            - |
-              [ $step_image_tag == $image_tag ]
+            -  if ! [[ "$step_image_name" =~ "test-automation-docker-local/jfreq" ]]; then return 1; fi
