@@ -1,5 +1,5 @@
 pipelines:
-  - name: pipelines_auto_u20_gcp
+  - name: pipelines_auto_u20_az
     steps:
       - name: d_AZ_u20_language
         type: Bash
