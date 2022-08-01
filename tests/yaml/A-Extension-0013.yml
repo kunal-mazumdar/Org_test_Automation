@@ -8,9 +8,9 @@ resources:
     type: GitRepo
     configuration:
       # SCM integration where the repository is located
-      gitProvider: gitmyhub # this will be replaced from values.yml
+      gitProvider: s_gitHub # this will be replaced from values.yml
       # Repository path, including org name/repo name
-      path: TP/pipelines-test-repo # this will be replaced from values.yml
+      path: nitind123/Org_test_Automation # this will be replaced from values.yml
 
 pipelines:
   - name: demo_manual
