@@ -1,20 +1,20 @@
 resources:
-  - name: testResource
-    type: test/TestResource
+  - name: myPropertyBag
+    type: PropertyBag
     configuration:
-      foo: bar
+      commitSha: 1
+      runID: 1
 
 pipelines:
-  - name: PipelineExtension_automation
+  - name: demo_manual
     steps:
-      - name: step1
-        type: test/HealthCheck
+      - name: manual_trigger
+        type: Bash
         configuration:
-          healthCheckUrl: https://www.google.com/
-          notifyOnSuccess: true
-          notifyOnFailure: true
-          stuff:
-            - "hi"
-            - "hello"
           inputResources:
-            - name: testResource
+            - name: myPropertyBag
+        execution:
+          onExecute:
+            - printenv
+            - echo "hi"
+
