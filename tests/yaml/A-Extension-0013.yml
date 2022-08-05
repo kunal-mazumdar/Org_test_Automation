@@ -1,38 +1,20 @@
 resources:
-  - name: myPropertyBag
-    type: PropertyBag
+  - name: testResource
+    type: test/TestResource
     configuration:
-      commitSha: 1
-      runID: 1
-  - name: myFirstRepo
-    type: GitRepo
-    configuration:
-      # SCM integration where the repository is located
-      gitProvider: s_gitHub # this will be replaced from values.yml
-      # Repository path, including org name/repo name
-      path: nitind123/Org_test_Automation # this will be replaced from values.yml
+      foo: bar
 
 pipelines:
-  - name: demo_manual
-
+  - name: PipelineExtension_automation
     steps:
-      - name: manual_trigger
-        type: Bash
+      - name: step1
+        type: test/HealthCheck
         configuration:
+          healthCheckUrl: https://www.google.com/
+          notifyOnSuccess: true
+          notifyOnFailure: true
+          stuff:
+            - "hi"
+            - "hello"
           inputResources:
-            - name: myPropertyBag
-        execution:
-          onExecute:
-            - printenv
-            - echo "hi"
-      - name: manual_trigger1
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: manual_trigger
-          inputResources:
-            - name: myFirstRepo
-        execution:
-          onExecute:
-            - printenv
-            - echo "hi"
+            - name: testResource
