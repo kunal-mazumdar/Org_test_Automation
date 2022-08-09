@@ -1,18 +1,18 @@
 resources:
-  - name: myPropertyBag
+  - name: myPropertyBag_8878
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
 
 pipelines:
-  - name: demo_manual
+  - name: demo_manual_8878
     steps:
-      - name: manual_trigger
+      - name: manual_trigger_8878
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag
+            - name: myPropertyBag_8878
         execution:
           onExecute:
             - printenv

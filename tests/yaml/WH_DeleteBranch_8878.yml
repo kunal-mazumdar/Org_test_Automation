@@ -2,36 +2,36 @@ template: true
 valuesFilePath: ../values/gitRepoValues.yml
 
 resources:
-  - name: myPropertyBag
+  - name: myPropertyBag_8878
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myFirstRepo
+  - name: myFirstRepo_8878
     type: GitRepo
     configuration:
       gitProvider: s_gitHub
       path: {{ .Values.GitHub.Org_test_Automation.path }}
 
 pipelines:
-  - name: demo_manual
+  - name: demo_manual_8878
     steps:
-      - name: manual_trigger
+      - name: manual_trigger_8878
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag
+            - name: myPropertyBag_8878
         execution:
           onExecute:
             - printenv
             - echo "hi"
-      - name: manual_trigger1
+      - name: manual_trigger1_8878
         type: Bash
         configuration:
           inputSteps:
-            - name: manual_trigger
+            - name: manual_trigger_8878
           inputResources:
-            - name: myFirstRepo
+            - name: myFirstRepo_8878
         execution:
           onExecute:
             - printenv
