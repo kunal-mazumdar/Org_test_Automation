@@ -1,18 +1,18 @@
 resources:
-  - name: myPropertyBag_9494
+  - name: PS-Sync-9494
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
 
 pipelines:
-  - name: demo_manual
+  - name: PS-Sync-9494
     steps:
-      - name: manual_trigger_9494
+      - name: PS-Sync-9494
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag_9494
+            - name: PS-Sync-9494
         execution:
           onExecute:
             - printenv
