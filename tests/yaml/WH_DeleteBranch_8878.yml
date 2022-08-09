@@ -1,0 +1,38 @@
+template: true
+valuesFilePath: ../values/gitRepoValues.yml
+
+resources:
+  - name: myPropertyBag
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myFirstRepo
+    type: GitRepo
+    configuration:
+      gitProvider: s_gitHub
+      path: {{ .Values.GitHub.Org_test_Automation.path }}
+
+pipelines:
+  - name: demo_manual
+    steps:
+      - name: manual_trigger
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag
+        execution:
+          onExecute:
+            - printenv
+            - echo "hi"
+      - name: manual_trigger1
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: manual_trigger
+          inputResources:
+            - name: myFirstRepo
+        execution:
+          onExecute:
+            - printenv
+            - echo "hi"
