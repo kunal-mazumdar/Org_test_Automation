@@ -5,16 +5,16 @@ resources:
       foo: bar
 
 pipelines:
- - name: PipelineExtension_automation
-   steps:
+  - name: PipelineExtension_automation
+    steps:
       - name: step1
         type: test/HealthCheck
         configuration:
-           healthCheckUrl: https://www.google.com/
-           notifyOnSuccess: true
-           notifyOnFailure: true
-           stuff:
-              - "hi"
-              - "hello"
-           inputResources:
+          healthCheckUrl: https://www.google.com/
+          notifyOnSuccess: true
+          notifyOnFailure: true
+          stuff:
+            - "hi"
+            - "hello"
+          inputResources:
             - name: testResource
