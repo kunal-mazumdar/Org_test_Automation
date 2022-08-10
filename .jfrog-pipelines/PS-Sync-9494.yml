@@ -1,7 +1,7 @@
 pipelines:
-  - name: test_pipe_project2
+  - name: test_pipe_9494_1
     steps:
-      - name: test_step_1
+      - name: test_pipe_step_9494_1
         type: Bash
         execution:
           onExecute:
@@ -9,11 +9,11 @@ pipelines:
             - mkdir -p "node_modules/@jfrog-pipelines"
             - echo "test" >> node_modules/@jfrog-pipelines/test.txt
             - add_pipeline_files node_modules/@jfrog-pipelines jfrog_pipelines_packages_cache
-      - name: test_step_2
+      - name: test_pipe_step_9494_2
         type: Bash
         configuration:
           inputSteps:
-            - name: test_step_1
+            - name: test_pipe_step_9494_1
         execution:
           onExecute:
             - cd /tmp
