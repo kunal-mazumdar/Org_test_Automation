@@ -1,5 +1,5 @@
 pipelines:
-  - name: test_pipe_project2
+  - name: test_pipe_project5
     steps:
       - name: test_step_11
         type: Bash
