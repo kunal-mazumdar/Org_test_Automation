@@ -1,30 +1,22 @@
-resources:
-  - name: newRepo
-    type: GITRepo
-    configuration:
-      path: deepikasl/jfrog_pipelines
-      gitProvider: deepikaGithub
-      branches:
-        include: master
-  - name: propertyBag_1
-    type: PropertyBag
-    configuration:
-      foo: bar
-      foo1: bar1
-      foo2: bar2
-
 pipelines:
-  - name: demo_manual_1
+  - name: test_pipe_9494_15
     steps:
-      - name: manual_trigger_1
+      - name: test_pipe_step_9494_15
         type: Bash
-        configuration:
-          inputResources:
-            - name: newRepo
-          outputResources:
-            - name: propertyBag_1
-          integrations:
-            - name: deepikaGithub
         execution:
           onExecute:
-            - write_output propertyBag "foo=$run_number"
+            - cd /tmp
+            - mkdir -p "node_modules/@jfrog-pipelines"
+            - echo "test" >> node_modules/@jfrog-pipelines/test.txt
+            - add_pipeline_files node_modules/@jfrog-pipelines jfrog_pipelines_packages_cache
+      - name: test_pipe_step_9494_16
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: test_pipe_step_9494_15
+        execution:
+          onExecute:
+            - cd /tmp
+            - mkdir -p "target/node_modules"
+            - cd target
+            - restore_pipeline_files jfrog_pipelines_packages_cache node_modules/
