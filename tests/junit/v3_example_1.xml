@@ -2,8 +2,8 @@
 <testsuites>
     <testsuite name="Apix Cache Unit Tests" tests="65" assertions="115" failures="0" errors="0" time="0.440908">
         <testsuite name="Apix\Cache\ApcTest" file="ApcTest.php" tests="17" assertions="52" failures="0" errors="0" time="0.171252">
-            <testcase name="testComplyWithApc" class="Apix\Cache\ApcTest" file="ApcTest.php" line="48" assertions="2" time="0.04"/>
-            <testcase name="testDeleteInexistantReturnsFalse" class="Apix\Cache\ApcTest" file="ApcTest.php" line="130" assertions="1" time="0.05"/>
+            <testcase name="testComplyWithApc" classname="Apix\Cache\ApcTest" file="ApcTest.php" line="48" assertions="2" time="0.04"/>
+            <testcase name="testDeleteInexistantReturnsFalse" classname="Apix\Cache\ApcTest" file="ApcTest.php" line="130" assertions="1" time="0.05"/>
         </testsuite>
         <testsuite name="Apix\Cache\Serializer\IgbinaryTest" file="IgbinaryTest.php" tests="0" assertions="0" failures="0" errors="0" time="0.000000">
             <testsuite name="Apix\Cache\Serializer\IgbinaryTest::testSerialize" tests="0" assertions="0" failures="0" errors="0" time="0.000000">
@@ -28,7 +28,7 @@
                 <testcase name="testSerialize with data set #0" assertions="1" time="0.10"/>
                 <testcase name="testSerialize with data set #3" assertions="1" time="0.11"/>
                 <testcase name="testSerialize with data set #4" assertions="1" time="0.12"/>
-                <testcase name="testWithCall" class="ServiceContainerTest" file="/home/pipelines/workspace/src/github.com/pipelines/hiro/tests/ServiceContainerTest.php" line="13" assertions="2" time="0.02">
+                <testcase name="testWithCall" classname="ServiceContainerTest" file="/home/pipelines/workspace/src/github.com/pipelines/hiro/tests/ServiceContainerTest.php" line="13" assertions="2" time="0.02">
                     <failure type="PHPUnit_Framework_ExpectationFailedException">ServiceContainerTest::testWithCall
                         Failed asserting that two strings are equal.
                         --- Expected

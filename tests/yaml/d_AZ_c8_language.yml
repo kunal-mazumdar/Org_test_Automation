@@ -1,5 +1,5 @@
 pipelines:
-  - name: pipelines_auto1
+  - name: pipelines_auto_c8_az
     steps:
       - name: d_AZ_c8_language
         type: Bash

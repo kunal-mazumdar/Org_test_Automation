@@ -1,12 +1,12 @@
 pipelines:
-  - name: CleanHelmDeployment
+  - name: CleanHelmDeploymentNoPromo
     configuration:
       environmentVariables:
         readOnly:
-          RELEASE_NAME: 'simplehelm-test-promotion'
+          RELEASE_NAME: 'simplehelm-test-no-promotion'
           K8S_NAMESPACE: "pipe-master-pool"
     steps:
-      - name: CleanHelmResource
+      - name: CleanHelmResourceNoPromo
         type: Bash
         configuration:
           integrations:
