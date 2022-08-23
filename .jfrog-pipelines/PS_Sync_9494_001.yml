@@ -1,7 +1,7 @@
 pipelines:
-  - name: PS_Sync_9494_4
+  - name: PS_Sync_9494_001
     steps:
-      - name: PS_Sync_9494_7
+      - name: PS_Sync_9494_001_001
         type: Bash
         execution:
           onExecute:
@@ -9,11 +9,11 @@ pipelines:
             - mkdir -p "node_modules/@jfrog-pipelines"
             - echo "test" >> node_modules/@jfrog-pipelines/test.txt
             - add_pipeline_files node_modules/@jfrog-pipelines jfrog_pipelines_packages_cache
-      - name: PS_Sync_9494_8
+      - name: PS_Sync_9494_001_002
         type: Bash
         configuration:
           inputSteps:
-            - name: PS_Sync_9494_7
+            - name: PS_Sync_9494_001_001
         execution:
           onExecute:
             - cd /tmp
