@@ -1,0 +1,20 @@
+resources:
+  - name: myFirstRepo
+    type: GitRepo
+    configuration:
+      gitProvider: s_github
+      path: {{sourceRepository}}
+      branches:
+        include: {{gitBranch}}
+
+pipelines:
+  - name: P_sync_6525
+    steps:
+      - name: P_sync_6525
+        type: Bash
+        execution:
+          onExecute:
+            - echo {{gitBranch}}
+            - echo {{sourceRepository}}
+            - cd /tmp
+            
