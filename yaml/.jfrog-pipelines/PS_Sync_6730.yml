@@ -1,11 +1,11 @@
-resources:
-  - name: myFirstRepo
-    type: GitRepo
-    configuration:
-      gitProvider: github
-      path: {{sourceRepository}}
-      branches:
-        include: {{gitBranch}}
+# resources:
+#   - name: myFirstRepo
+#     type: GitRepo
+#     configuration:
+#       gitProvider: github
+#       path: {{sourceRepository}}
+#       branches:
+#         include: {{gitBranch}}
 
 pipelines:
   - name: P_sync_6525
