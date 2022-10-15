@@ -32,6 +32,8 @@ pipelines:
         type: Matrix
         stepMode: Bash
         configuration:
+          runtime:
+            type: host
           nodePool: u18dynamic
           multiNode: true
           inputSteps:
@@ -50,6 +52,8 @@ pipelines:
         type: Matrix
         stepMode: Powershell
         configuration:
+          runtime:
+            type: host
           nodePool: win_2019
           multiNode: true
           inputSteps:
