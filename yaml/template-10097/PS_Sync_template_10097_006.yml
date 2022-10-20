@@ -5,7 +5,7 @@ resources:
   - name: Git_template_10097_006
     type: GitRepo
     configuration:
-      path: {{sourceRepository}}
+      path: nitind123/Org_test_Automation
       gitProvider: s_gitHub
       branches:
         include: ^{{gitBranch}}$
