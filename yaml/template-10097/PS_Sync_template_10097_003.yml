@@ -4,7 +4,7 @@ resources:
   - name: Git_template_10097_003
     type: GITRepo
     configuration:
-      path: {{sourceRepository}}
+      path: nitind123/Org_test_Automation
       gitProvider: s_gitHub
       branches:
         include: master
