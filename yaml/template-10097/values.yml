@@ -1,0 +1,36 @@
+sample_step_1:
+  name: sample_step_1
+  type: Bash
+
+Pipeline:
+  name: foo
+
+GitRepo:
+  name: fooGitRepo
+  gitProvider: s_gitHub
+  path: {{ .Values.GitHub.Org_test_Automation.path }}
+  branches:
+    exclude: 'master'
+    include: {{gitBranch}}
+
+artifactoryIntegration: art
+
+Image:
+  name: fooImage
+  sourceRepository: foo
+  autoPull: false
+
+DockerBuild:
+  name: foobuild
+  dockerImageName: foo
+  dockerFileName: foo
+  dockerFileLocation: '.'
+  dockerImageTag: ${run_number}
+
+DockerPush:
+  name: foopush
+  targetRepository: foo
+
+BuildInfo:
+  autoPublishBuildInfo: true
+  name: fooBuildInfo
