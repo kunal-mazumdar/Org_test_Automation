@@ -1,9 +1,7 @@
-include:
-  template: jfrog/DockerBuildAndPush/1.0.0
 valuesFilePath: ./values.yml
 
 resources:
-  - name: Git_template_10097_001
+  - name: Git_template_10097_002
     type: GITRepo
     configuration:
       path: nitind123/Org_test_Automation
@@ -11,7 +9,7 @@ resources:
       branches:
         include: master
 
-  - name: Pro_template_10097_001
+  - name: Pro_template_10097_002
     type: PropertyBag
     configuration:
       foo: bar
@@ -19,18 +17,18 @@ resources:
       foo2: bar2
 
 pipelines:
-  - name: PS_Sync_template_10097_001
+  - name: PS_Sync_template_10097_002
     configuration:
       integrations:
         - name: s_gitHub
     steps:
-      - name: PS_Sync_template_10097_001
+      - name: PS_Sync_template_10097_002
         type: Bash
         configuration:
           inputResources:
-            - name: Git_template_10097_001
+            - name: Git_template_10097_002
           outputResources:
-            - name: Pro_template_10097_001
+            - name: Pro_template_10097_002
           integrations:
             - name: s_gitHub
         execution:
