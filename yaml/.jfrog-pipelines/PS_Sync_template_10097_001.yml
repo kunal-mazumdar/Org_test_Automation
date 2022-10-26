@@ -1,17 +1,17 @@
 include:
-  template: jfrog/DockerBuildAndPush/1.0.0
+  template: jfrog/DockerBuildAndPush/1.0.0    
 valuesFilePath: ./values.yml
 
 resources:
-  - name: Git_template_10097_001
+  - name: myRepo
     type: GITRepo
     configuration:
-      path: nitind123/Org_test_Automation
-      gitProvider: s_gitHub
+      path: deepikasl/jfrog_pipelines
+      gitProvider: deepikaGithub
       branches:
         include: master
 
-  - name: Pro_template_10097_001
+  - name: propertyBag
     type: PropertyBag
     configuration:
       foo: bar
@@ -19,20 +19,20 @@ resources:
       foo2: bar2
 
 pipelines:
-  - name: PS_Sync_template_10097_001
+  - name: demo_manual
     configuration:
       integrations:
-        - name: s_gitHub
+        - name: deepikaGithub
     steps:
-      - name: PS_Sync_template_10097_001
+      - name: manual_trigger
         type: Bash
         configuration:
           inputResources:
-            - name: Git_template_10097_001
+            - name: myRepo
           outputResources:
-            - name: Pro_template_10097_001
+            - name: propertyBag
           integrations:
-            - name: s_gitHub
+            - name: deepikaGithub
         execution:
           onExecute:
             - write_output propertyBag "foo=$run_number"
