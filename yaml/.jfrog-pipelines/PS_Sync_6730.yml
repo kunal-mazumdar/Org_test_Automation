@@ -1,34 +1,24 @@
 resources:
-  - name: Git_template_10097_004
-    type: GITRepo
+  - name: myFirstRepo
+    type: GitRepo
     configuration:
-      path: nitind123/Org_test_Automation
-      gitProvider: s_gitHub
+      gitProvider: github
+      path: {{sourceRepository}}
       branches:
-        include: master
-
-  - name: Pro_template_10097_004
-    type: PropertyBag
-    configuration:
-      foo: bar
-      foo1: bar1
-      foo2: bar2
+        include: {{gitBranch}}
 
 pipelines:
-  - name: PS_Sync_template_10097_004
-    configuration:
-      integrations:
-        - name: s_gitHub
+  - name: Ps_variable_resolved_6730
     steps:
-      - name: PS_Sync_template_10097_004
+      - name: Ps_variable_resolved_6730
         type: Bash
         configuration:
-          inputResources:
-            - name: Git_template_10097_004
-          outputResources:
-            - name: Pro_template_10097_004
-          integrations:
-            - name: s_gitHub
+          environmentVariables:
+            env1:           {{gitBranch}}
+            env2:           {{sourceRepository}}
         execution:
           onExecute:
-            - write_output propertyBag "foo=$run_number"
+            - echo {{gitBranch}}
+            - echo {{sourceRepository}}
+            - cd /tmp
+            
