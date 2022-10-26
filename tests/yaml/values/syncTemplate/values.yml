@@ -7,7 +7,7 @@ Pipeline:
 GitRepo:
   name: PS_Sync_template_GitRepo_10097
   gitProvider: s_gitHub
-  path: nitind123/Org_test_Automation
+  path: jfbetapipeorg/Org_test_Automation
   branches:
     exclude: 'master'
     include: {{gitBranch}}
