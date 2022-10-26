@@ -13,7 +13,6 @@ resources:
       foo: bar
       foo1: bar1
       foo2: bar2
-
 pipelines:
   - name: PS_Sync_template_10097_004
     configuration:

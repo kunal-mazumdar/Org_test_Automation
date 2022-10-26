@@ -14,8 +14,8 @@ pipelines:
         type: Bash
         configuration:
           environmentVariables:
-            env1:           {{gitBranch}}
-            env2:           {{sourceRepository}}
+            env1: {{gitBranch}}
+            env2: {{sourceRepository}}
         execution:
           onExecute:
             - echo {{gitBranch}}

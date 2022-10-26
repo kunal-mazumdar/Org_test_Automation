@@ -1,6 +1,5 @@
 template: true
 valuesFilePath: ./values/syncTemplate/values.yml
-
 resources:
   - name: Git_template_10097_006
     type: GitRepo

@@ -1,5 +1,4 @@
 valuesFilePath: ./values/syncTemplate/values.yml
-
 resources:
   - name: Git_template_10097_002
     type: GITRepo
