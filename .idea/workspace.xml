@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="512cd514-2338-47d2-b6f7-8354c8d3414d" name="Changes" comment="PIPE-10097 - Add support of template inclusion from yml">
+      <change beforePath="$PROJECT_DIR$/yaml/.jfrog-pipelines/PS_Sync_template_10097_001.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yaml/.jfrog-pipelines/PS_Sync_template_10097_001.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yaml/.jfrog-pipelines/values.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yaml/.jfrog-pipelines/values.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2C80MZbFn0XaD6f0ggHDpYp9FhG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/yaml/.jfrog-pipelines" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/yaml/.jfrog-pipelines" />
+      <recent name="$PROJECT_DIR$/tests/yaml" />
+      <recent name="$PROJECT_DIR$/tests/yaml/values/syncTemplate" />
+      <recent name="$PROJECT_DIR$/yaml1/.jfrog-pipelines" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/project2/.jfrog-pipelines" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="512cd514-2338-47d2-b6f7-8354c8d3414d" name="Changes" comment="" />
+      <created>1658168856400</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658168856400</updated>
+      <workItem from="1659702865149" duration="2249000" />
+      <workItem from="1660019988112" duration="12100000" />
+      <workItem from="1661105782356" duration="1471000" />
+      <workItem from="1661145403851" duration="498000" />
+      <workItem from="1661256295901" duration="3631000" />
+      <workItem from="1665631198379" duration="1742000" />
+      <workItem from="1666287708359" duration="14854000" />
+    </task>
+    <task id="LOCAL-00001" summary="PIPE-10097 - Add support of template inclusion from yml">
+      <created>1666294984802</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666294984802</updated>
+    </task>
+    <task id="LOCAL-00002" summary="PIPE-10097 - Add support of template inclusion from yml">
+      <created>1666801446982</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666801446982</updated>
+    </task>
+    <task id="LOCAL-00003" summary="PIPE-10097 - Add support of template inclusion from yml">
+      <created>1666801591404</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666801591404</updated>
+    </task>
+    <task id="LOCAL-00004" summary="PIPE-10097 - Add support of template inclusion from yml">
+      <created>1666805323875</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666805323875</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="PIPE-10097 - Add support of template inclusion from yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="PIPE-10097 - Add support of template inclusion from yml" />
+  </component>
+</project>
