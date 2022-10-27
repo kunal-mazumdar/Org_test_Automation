@@ -1,5 +1,6 @@
 include:
   template: jfrog/DockerBuildAndPush/1.0.0
+valuesFilePath: ./values/syncTemplate/values.yml
 resources:
   - name: Git_template_10097_001
     type: GITRepo
