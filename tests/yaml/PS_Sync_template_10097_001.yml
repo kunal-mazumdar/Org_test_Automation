@@ -5,7 +5,7 @@ resources:
   - name: Git_template_10097_001
     type: GITRepo
     configuration:
-      path: nitind123/Org_test_Automation
+      path:  jfbetapipeorg/Org_test_Automation
       gitProvider: s_gitHub
       branches:
         include: master
