@@ -2,7 +2,7 @@ resources:
   - name: myFirstRepo
     type: GitRepo
     configuration:
-      gitProvider: github
+      gitProvider: s_gitHub
       path: {{sourceRepository}}
       branches:
         include: {{gitBranch}}
