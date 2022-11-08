@@ -23,4 +23,4 @@ pipelines:
             - pushd ${res_P_Sync_6525_002_gitrepo_resourcePath}
             - ls -la
             - popd 
-            
+          
