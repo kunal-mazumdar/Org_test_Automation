@@ -1,6 +1,7 @@
 pipelines:
   - name: PS_Sync_9494_001
     steps:
+    
       - name: PS_Sync_9494_001_001
         type: Bash
         execution:
