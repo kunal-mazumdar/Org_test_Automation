@@ -9,7 +9,6 @@ resources:
       path: {{ .Values.GitHub.Org_test_Automation_bash.path }}
       branches:
         include: {{gitBranch}}
-
 pipelines:
   - name: P_Sync_6525_002
     steps:
