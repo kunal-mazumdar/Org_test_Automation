@@ -9,7 +9,6 @@ resources:
       gitProvider: github_nitin
       branches:
         include: master
-
   - name: Pro_template_10097_001
     type: PropertyBag
     configuration:
