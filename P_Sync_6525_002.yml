@@ -1,6 +1,5 @@
 template: true
 valuesFilePath: ../values/gitRepoValues.yml
-
 resources:
   - name: P_Sync_6525_002_gitrepo
     type: GitRepo
