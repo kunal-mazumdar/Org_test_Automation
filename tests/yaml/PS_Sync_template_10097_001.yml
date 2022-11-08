@@ -6,7 +6,7 @@ resources:
     type: GITRepo
     configuration:
       path:  nitind123/Org_test_Automation
-      gitProvider: s_gitHub
+      gitProvider: github_nitin
       branches:
         include: master
 
@@ -21,7 +21,7 @@ pipelines:
   - name: PS_Sync_template_10097_001
     configuration:
       integrations:
-        - name: s_gitHub
+        - name: github_nitin
     steps:
       - name: PS_Sync_template_10097_001
         type: Bash
@@ -31,7 +31,7 @@ pipelines:
           outputResources:
             - name: Pro_template_10097_001
           integrations:
-            - name: s_gitHub
+            - name: github_nitin
         execution:
           onExecute:
             - write_output propertyBag "foo=$run_number"
