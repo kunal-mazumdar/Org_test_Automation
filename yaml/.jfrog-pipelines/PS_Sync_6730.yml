@@ -13,12 +13,9 @@ pipelines:
       - name: Ps_variable_resolved_6730
         type: Bash
         configuration:
-          integrations:
-            - name: {{ defaultArtifactory }}
           environmentVariables:
             env1: {{gitBranch}}
             env2: {{sourceRepository}}
-            env3: {{ defaultArtifactory }}
         execution:
           onExecute:
             - echo {{gitBranch}}
