@@ -27,7 +27,7 @@ pipelines:
         execution:
           onStart:
             - Set-Variable -Name "taskVersion" -Scope "Global" -Value "v2.4.${run_id}"
-            - New-Item -Path "$step_tmp_dir/$taskVersion" -ItemType Container
+            - New-Item -Path "$step_tmp_dir/task" -ItemType Container
             - Copy-Item -Path "${res_S_PS_Tasks_10148_05_repo_resourcePath}/tests/tasks/hello/*" -Destination $step_tmp_dir/task/ -Recurse -Force
             - Push-Location $step_tmp_dir/
             - jf rt u "task/*" "test-automation-generic-local/jfrog/hello/${taskVersion}.zip" --archive zip
