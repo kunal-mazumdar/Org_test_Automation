@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_gitHub
-      path: {{valuesourceRepository}}
+      path: {{ invalidVariable }}
       branches:
         include: 'master'
 
@@ -14,9 +14,8 @@ pipelines:
         type: Bash
         configuration:
           environmentVariables:
-            env2: {{valuesourceRepository}}
+            env2: {{ invalidVariable }}
         execution:
           onExecute:
-            - echo {{valuesourceRepository}}
+            - echo {{ invalidVariable }}
             - cd /tmp
-            
