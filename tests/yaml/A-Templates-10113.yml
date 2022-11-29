@@ -24,7 +24,7 @@ pipelines:
         readOnly:
           templateTarget:
             default: {{ .Values.release_template.path }}
-            description: Please mention the path of your template from your scm repository, in this format: templates/<namespace>/name_of_the_template>
+            description: "Please mention the path of your template from your scm repository, in this format: templates/name_of_the_template>"
           VERSION:
             default: {{ .Values.release_template.version }}
             description: Please enter sementic version
@@ -50,7 +50,9 @@ pipelines:
             - read -a pathArr <<< "$templateTarget"
             - |
               if [[ ${pathArr[0]} != 'templates' ]]; then
-                echo "templateTarget- $templateTarget should be in this format templates/<namespace>/name_of_the_template>"
+
+                echo "templateTarget- $templateTarget should be in this format templates/name_of_the_template>"
+
               elseif [[ ${pathArr[1]} == 'jfrog' ]]; then
                 echo "namespace cannot be jfrog, please choose a different namespace"
               fi
