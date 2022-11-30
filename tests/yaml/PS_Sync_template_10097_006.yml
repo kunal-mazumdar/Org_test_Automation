@@ -4,7 +4,7 @@ resources:
   - name: Git_template_10097_006
     type: GitRepo
     configuration:
-      path: jfbetapipeorg/Org_test_Automation
+      path: {{sourceRepository}}
       gitProvider: s_gitHub
       branches:
         include: ^{{gitBranch}}$
