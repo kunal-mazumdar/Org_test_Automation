@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_gitHub
-      path: {{sourceRepository}}
+      path: jfbetapipeorg/Org_test_Automation
       branches:
         include: {{gitBranch}}
 
@@ -17,11 +17,11 @@ pipelines:
             - name: {{ defaultArtifactory }}
           environmentVariables:
             env1: {{gitBranch}}
-            env2: {{sourceRepository}}
+            env2: jfbetapipeorg/Org_test_Automation
             env3: {{ defaultArtifactory }}
         execution:
           onExecute:
             - echo {{gitBranch}}
-            - echo {{sourceRepository}}
+            - echo jfbetapipeorg/Org_test_Automation
             - cd /tmp
             
