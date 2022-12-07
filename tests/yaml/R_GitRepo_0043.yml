@@ -2,7 +2,7 @@ template: true
 valuesFilePath: ../values/gitRepoValues.yml
 
 resources:
-  - name: r_gitlab
+  - name: r_gitLab
     type: GitRepo
     configuration:
       gitProvider: s_gitlab
