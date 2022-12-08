@@ -1,6 +1,6 @@
 templateRepository:
   gitProvider: s_gitHub
-  path: "{{sourceRepository}}"
+  path: "{{.jfrog-pipelines.sourceRepository}}"
   branch: "{{gitBranch}}"
   templateFolder: tests/uploadTemplate/templates/jfrog/myPipelineTemplate
 
