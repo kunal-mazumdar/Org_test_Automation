@@ -2,6 +2,6 @@ resources:
   - name: r_artifactory
     type: BuildInfo
     configuration:
-      sourceArtifactory: i_artifactory
+      sourceArtifactory: I_Generic_10660_001_artifactory
       buildName: mvn_sample_build_auto
       buildNumber: 1

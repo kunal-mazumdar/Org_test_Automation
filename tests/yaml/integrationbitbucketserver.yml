@@ -1,6 +1,0 @@
-resources:
-  - name: r_bitbucketserver
-    type: GitRepo
-    configuration:
-     gitProvider: i_bitBucketServer
-     path: PIP/automation/tests/core/yaml
