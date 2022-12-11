@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_gitHub
-      path: nitind23/Org_test_Automation
+      path: {{.jfrog-pipelines.sourceRepository}}
       branches:
         include: {{gitBranch}}
 
@@ -17,11 +17,11 @@ pipelines:
             - name: {{ defaultArtifactory }}
           environmentVariables:
             env1: {{gitBranch}}
-            env2: nitind23/Org_test_Automation
+            env2: {{.jfrog-pipelines.sourceRepository}}
             env3: {{ defaultArtifactory }}
         execution:
           onExecute:
             - echo {{gitBranch}}
-            - echo '{{.jfrog-pipelines.sourceRepository}}'
+            - echo {{.jfrog-pipelines.sourceRepository}}
             - cd /tmp
             
