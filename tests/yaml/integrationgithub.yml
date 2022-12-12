@@ -1,9 +1,0 @@
-template: true
-valuesFilePath: ../values/gitRepoValues.yml
-
-resources:
-  - name: r_github
-    type: GitRepo
-    configuration:
-      gitProvider: i_GitHub
-      path: {{ .Values.GitHub.Org_test_Automation.path }}

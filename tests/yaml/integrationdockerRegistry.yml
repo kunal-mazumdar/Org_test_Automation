@@ -1,8 +1,0 @@
-resources:
-  - name: r_dockerRegistry
-    type: Image
-    configuration:
-       registry: i_DockerPrivate
-       imageName: u16all
-       imageTag: app
- 

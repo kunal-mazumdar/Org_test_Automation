@@ -1,9 +1,0 @@
-template: true
-valuesFilePath: ../values/gitRepoValues.yml
-
-resources:
-  - name: r_gitlab
-    type: GitRepo
-    configuration:
-      gitProvider: i_gitlab
-      path: {{ .Values.GitLab.test_automation.path }}
