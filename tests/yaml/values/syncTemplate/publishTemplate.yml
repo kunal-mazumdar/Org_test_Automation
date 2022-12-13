@@ -9,4 +9,4 @@ publishTemplate:
   name: templateDefinition
   version: 0.0.1
   pipelineName: Publish_Template_10113
-  
+  artifactoryIntegration: s_artifactory
