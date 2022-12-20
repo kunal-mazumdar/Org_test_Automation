@@ -24,4 +24,3 @@ pipelines:
             - ls -la
             - popd 
        
-       
