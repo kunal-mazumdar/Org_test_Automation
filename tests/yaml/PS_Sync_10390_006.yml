@@ -14,5 +14,5 @@ pipelines:
           onExecute:
             - echo {{ append  .Values.repoBranch 5 }}
             - echo {{ until 5 }}
-            - echo {{ max 1 2 5 }}
+            - echo {{ base "foo/bar/baz" }}
             - echo {{ semver "1.4.3" | (semver "1.2.3").Compare }}
