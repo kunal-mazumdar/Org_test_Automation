@@ -15,5 +15,5 @@ pipelines:
           onExecute:
             - echo {{ tpl (toYaml .Values.repoName) . | quote }}
             - echo {{ and .Values.arg .Values.repoBranch }}
-            - echo {{ ge .Values.arg .Values.repoBranch }}
+            - echo {{ ge 5 4 }}
             - echo {{ default "master" .Values.arg }}
