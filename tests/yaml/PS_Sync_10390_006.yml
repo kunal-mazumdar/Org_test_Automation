@@ -1,7 +1,6 @@
 valuesFilePath: ./values/helm/values.yml
 
 pipelines:
-  {{- range .Values.repoBranch }}
   - name: P_data
     steps:
       - name: S_data
@@ -15,4 +14,5 @@ pipelines:
             - echo {{ append  .Values.repoBranch 5 }}
             - echo {{ until 5 }}
             - echo {{ base "foo/bar/baz" }}
+            - echo {{ max 1 2 5 }}
             - echo {{ semver "1.4.3" | (semver "1.2.3").Compare }}
