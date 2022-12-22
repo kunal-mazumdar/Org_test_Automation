@@ -12,5 +12,6 @@ pipelines:
             env3: {{ genCA "foo-ca" 365 }}
         execution:
           onExecute:
-            - echo {{ sha256sum .Values.repoBranch }}
+            - echo {{ genCA "foo-ca" 365 }}
+            - echo {{ sha256sum 'master' }}
 {{ end }}  
