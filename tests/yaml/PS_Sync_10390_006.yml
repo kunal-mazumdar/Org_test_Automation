@@ -12,7 +12,7 @@ pipelines:
             env2: sourceRepository
         execution:
           onExecute:
-            - echo {{ append  .Values.repoBranch 5 }}
+            
             - echo {{ until 5 }}
             - echo {{ max 1 2 5 }}
             - echo {{ base "foo/bar/baz" }}
