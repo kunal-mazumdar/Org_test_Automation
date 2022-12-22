@@ -16,4 +16,4 @@ pipelines:
             - echo {{ empty .Values.arg }}
             - echo {{ coalesce 0 1 2 }}
             - echo {{ true | ternary .Values.arg "master" }}
-            - echo {{ pick `$env2` "name1" "name2" }}
+            - echo {{ pick $myDict "name1" "name2" }}
