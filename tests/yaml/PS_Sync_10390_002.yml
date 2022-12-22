@@ -18,6 +18,6 @@ pipelines:
           onExecute:
             - echo {{ regexFind "[a-zA-Z][1-9]" "abcd1234" }}
             - echo {{ contains "org" .Values.repoName }}
-            - echo {{ indent 4 pipe.additionalEnvs }}
+            - echo {{ indent 4 "pipe.additionalEnvs" }}
             - echo {{ "pipeline controleplane repo " | replace " " "-" }}
             - echo {{ list 1 2 3 | toStrings }}
