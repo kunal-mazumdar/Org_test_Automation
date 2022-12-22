@@ -13,5 +13,5 @@ pipelines:
         execution:
           onExecute:
             - echo {{ genCA "foo-ca" 365 }}
-            - echo {{ sha256sum 'master' }}
+            - echo {{ sha256sum "Hello world!" }}
 {{ end }}  
