@@ -11,7 +11,7 @@ pipelines:
             env2: sourceRepository
         execution:
           onExecute:
-            - echo {{ append  4 5 }}
+            - echo {{ append  sourceRepository gitBranch }}
             - echo {{ until 5 }}
             - echo {{ base "foo/bar/baz" }}
             - echo {{ max 1 2 5 }}
