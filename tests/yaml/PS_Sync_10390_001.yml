@@ -22,4 +22,4 @@ pipelines:
             - echo {{ .Values.repoBranch | quote }}
             - echo {{ printf "%s branch of %d repo." .Values.repoBranch .Values.repoName }}
             - echo {{ initials "branch master" }}
-            - echo {{ wrap 80 .Values.repoBranch }}
+            - echo {{ wrap 80 "branch master" }}
