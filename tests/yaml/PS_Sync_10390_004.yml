@@ -9,11 +9,9 @@ pipelines:
         configuration:
           environmentVariables:
             env1: gitBranch
-            env2: {{ genCA "foo-ca" 365 }}
         execution:
           onExecute:
             - echo {{ sha256sum .Values.repoBranch }}
-            - echo $env2
             - echo {{ "30tEfhuJSVRhpG97XCuWgz2okj7L8vQ1s6V9zVUPeDQ=" | decryptAES "secretkey" }}
             - echo {{ now | date "2022-01-02" }}
   {{ end }}
