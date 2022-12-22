@@ -9,8 +9,7 @@ pipelines:
         configuration:
           environmentVariables:
             env1: gitBranch
-            env3: {{ genCA "foo-ca" 365 }}
         execution:
           onExecute:
-            - echo {{ genCA "foo-ca" 365 }}
+            - echo {{ sha256sum "Hello world!" }}
 {{ end }}  
