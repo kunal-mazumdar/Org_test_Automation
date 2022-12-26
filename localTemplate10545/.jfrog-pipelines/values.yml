@@ -1,3 +1,5 @@
+Pipeline:
+  name: Pipeline_10545
 # pipeline resources
 GitRepo:
   name: GitRepoRes
@@ -9,10 +11,3 @@ GitRepo:
   branches:
     include: master
 
-HelmChart:
-  name: HelmChartRes
-  chartName: simplehelm
-  chartVersion: 0.3.0
-  repository: simplecharts
-  helmVersion: 3
-  namespace: pipe-master-pool
