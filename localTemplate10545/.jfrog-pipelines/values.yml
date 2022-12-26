@@ -1,0 +1,18 @@
+# pipeline resources
+GitRepo:
+  name: GitRepoRes
+  type: GitRepo
+  gitProvider: s_gitHub
+  path: {{.jfrog-pipelines.sourceRepository}}
+  files:
+    include: tests/core/helmdeploy/simplehelm.*
+  branches:
+    include: master
+
+HelmChart:
+  name: HelmChartRes
+  chartName: simplehelm
+  chartVersion: 0.3.0
+  repository: simplecharts
+  helmVersion: 3
+  namespace: pipe-master-pool
