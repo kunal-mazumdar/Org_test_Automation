@@ -2,7 +2,7 @@ resources:
   - name: PS_variable_resolved_10098_File
     type: FileSpec
     configuration:
-      sourceArtifactory: {{ defaultArtifactory }}
+      sourceArtifactory: {{.jfrog-pipelines.sourceRepository}}
       pattern: {{ rootBucket }}/tools/pipelines-template
 
 pipelines:
@@ -12,7 +12,7 @@ pipelines:
         type: Bash
         configuration:
           integrations:
-            - name: {{ defaultArtifactory }}
+            - name: {{.jfrog-pipelines.sourceRepository}}
           environmentVariables:
             env1: {{ rootBucket }}
         execution:
