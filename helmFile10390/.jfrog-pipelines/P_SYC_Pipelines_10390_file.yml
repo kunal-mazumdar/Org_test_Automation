@@ -15,6 +15,6 @@ pipelines:
             - echo {{ get (.Files.Get "config.json" | fromJson) "message" }}
             - echo {{ get (.Files.Get "config.yml" | fromYaml) "message" }}
             - echo {{ get (.Files.Get ".jfrog-pipelines/config.yml" | fromYaml) "message" }}
-            - echo {{ get (.Files.Get "./config.yml" | fromYaml) "message" }}
-            - echo {{ get (.Files.Get "./config1.yml" | fromYaml) "message" }}
+            - echo {{ get (.Files.Get "../config.yml" | fromYaml) "message" }}
+            - echo {{ get (.Files.Get "config1.yml" | fromYaml) "message" }}
             - echo {{ tpl (.Files.Get "config.yml") . | b64enc }}
