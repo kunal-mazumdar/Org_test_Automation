@@ -5,13 +5,9 @@ pipelines:
     steps:
       - name: S_data
         type: Bash
-        configuration:
-          environmentVariables:
-            env1: gitBranch
-            env2: sourceRepository
         execution:
           onExecute:
-            - echo {{ append  sourceRepository gitBranch }}
+            - echo {{ append  ( list 1 2 ) 3 }}
             - echo {{ until 5 }}
             - echo {{ base "foo/bar/baz" }}
             - echo {{ max 1 2 5 }}
