@@ -7,7 +7,7 @@ pipelines:
         type: Bash
         execution:
           onExecute:
-            - echo {{ append  ( list 1 2 ) 3 }}
+            - echo {{ concat (append  ( list 1 2 ) 3)  ( list 4 5 ) }}
             - echo {{ until 5 }}
             - echo {{ base "foo/bar/baz" }}
             - echo {{ max 1 2 5 }}
