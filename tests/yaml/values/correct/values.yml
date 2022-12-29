@@ -1,7 +1,7 @@
 GitRepo:
   name: fooGitRepo
   gitProvider: s_gitHub
-  path: jfbetapipeorg/Org_test_Automation
+  path: {{.jfrog-pipelines.sourceRepository}}
   branches:
     include: 'master'
 
