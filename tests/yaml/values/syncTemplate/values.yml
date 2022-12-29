@@ -7,12 +7,12 @@ Pipeline:
 GitRepo:
   name: PS_Sync_template_GitRepo_10097
   gitProvider: s_gitHub
-  path: jfbetapipeorg/Org_test_Automation
+  path: {{.jfrog-pipelines.sourceRepository}}
   branches:
     exclude: 'master'
     include: {{gitBranch}}
 
-artifactoryIntegration: art
+artifactoryIntegration: s_artifactory
 
 Image:
   name: PS_Sync_template_Image_10097
