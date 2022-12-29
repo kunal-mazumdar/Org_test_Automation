@@ -1,4 +1,4 @@
- include:
+include:
   template: nameSpace10545/nameSpace10545/0.0.0
 valuesFilePath: ./values.yml
 pipelines:
