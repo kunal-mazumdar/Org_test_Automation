@@ -1,7 +1,7 @@
 GitRepo:
   name: fooGitRepo
   gitProvider: s_gitHub
-  path: nitind123/Org_test_Automation
+  path: {{.jfrog-pipelines.sourceRepository}}
   branches:
     include: 'master'
 
