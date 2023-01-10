@@ -1,12 +1,5 @@
 pipelines:
   - name: S_Bash_10641_0001
-    configuration:
-      runtime:
-        type: image
-        image:
-          custom:
-            name: releases-docker.jfrog.io/jfrog/pipelines-u20node
-            tag: '16'
     steps:
       - name: S_Bash_10641_0001_1
         type: Bash
