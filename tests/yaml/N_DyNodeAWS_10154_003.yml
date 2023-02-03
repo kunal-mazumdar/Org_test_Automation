@@ -9,4 +9,4 @@ pipelines:
             type: host
         execution:
           onExecute:
-            - node16 -v
+            - node18 -v
