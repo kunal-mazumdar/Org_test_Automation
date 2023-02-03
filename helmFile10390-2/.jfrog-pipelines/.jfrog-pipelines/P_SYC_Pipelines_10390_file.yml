@@ -1,6 +1,4 @@
-{{- define "pipe.additionalEnvs" -}}
-env3: additional
-  {{ end -}}
+
 pipelines:
   - name: P_files
     steps:
@@ -8,9 +6,8 @@ pipelines:
         type: Bash
         configuration:
           environmentVariables:
-            env1: gitbranch
+            env1: gitBranch
             env2: sourceRepository
-            {{ include "pipe.additionalEnvs" . }}
             helperName: {{ include "sanity.name" . }}
         execution:
           onExecute:
