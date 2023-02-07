@@ -40,7 +40,7 @@ pipelines:
                 target: "execute"
           onComplete:
             - echo "on Complete"
-            - jf rt del "test-automation-generic-local/jfrog/hello/@v/${taskVersion}.zip" || true
+            - jf rt del "test-automation-tasks-local/jfrog/hello/@v/${taskVersion}.zip" || true
           onSuccess:
             - echo "on Success"
           onFailure:
