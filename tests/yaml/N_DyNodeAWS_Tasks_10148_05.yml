@@ -30,16 +30,16 @@ pipelines:
             - New-Item -Path "$step_tmp_dir/task" -ItemType Container
             - Copy-Item -Path "${res_N_DyNodeAWS_Tasks_10148_05_repo_resourcePath}/tests/tasks/hello/*" -Destination $step_tmp_dir/task/ -Recurse -Force
             - Push-Location $step_tmp_dir/
-            - jf rt u "task/*" "test-automation-generic-local/jfrog/hello/${taskVersion}.zip" --archive zip
+            - jf rt u "task/*" "test-automation-tasks-local/jfrog/hello/@v/${taskVersion}.zip" --archive zip
           onExecute:
             - task: jfrog/hello@${taskVersion}
-              repository: test-automation-generic-local
+              repository: test-automation-tasks-local
               id: N_DyNodeAWS_Tasks_10148_05_task
               input:
                 target: "execute"
           onComplete:
             - echo "on Complete"
-            - try { jf rt del "test-automation-generic-local/jfrog/hello/${taskVersion}.zip" } catch {}
+            - try { jf rt del "test-automation-generic-local/jfrog/hello/@v/${taskVersion}.zip" } catch {}
           onSuccess:
             - echo "on Success"
           onFailure:
