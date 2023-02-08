@@ -50,6 +50,7 @@ pipelines:
         type: Bash
         execution:
           onExecute:
+            - export JFROG_PIPELINES_RUN_STATE_DEBUG=true
             - echo "testing" > run_state
             - add_run_files run_state run_state
 
