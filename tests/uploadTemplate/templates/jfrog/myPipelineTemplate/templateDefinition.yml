@@ -44,14 +44,14 @@ resources:
       autoPull: false
 
 pipelines:
-- name: {{ .Values.Pipeline.release.name }}
+- name: Pipeline_10390_005
   configuration:
     environmentVariables:
       readOnly:
         GIT_BRANCH: ""
         CI: "true"
   steps:
-  - name: select_release_versions
+  - name: pipeline_helm_step_001
     type: Bash
     configuration:
       chronological: true
@@ -232,7 +232,7 @@ pipelines:
       onSuccess:
         - stepCommons_on_success
 
-- name: {{ .Values.Pipeline.post_release.name }}
+- name: Pipeline_10390_Helm_001
   steps:
   - name: promote_builds_to_staging_repositories
     type: Bash
