@@ -1,3 +1,8 @@
+
+{{- define "pipe.additionalEnvs" -}}
+env3: additional
+  {{ end -}}       
+
 resources:
   #GIT RESOURCES
   - name: Publish_Template_10390_002
@@ -7,12 +12,6 @@ resources:
       gitProvider: {{ .Values.GitRepo.gitProvider}}
       branches:
         include: {{ .Values.GitRepo.branch}}
-
-
-{{- define "pipe.additionalEnvs" -}}
-env3: additional
-  {{ end -}}        
-        
 
 pipelines:
   {{ if eq "master" (.Values.GitRepo.branch | toString) }}
